@@ -1,0 +1,145 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+nav{
+    display: flex;
+    padding: 10px 50px;
+    background-color: #F0F0F0;
+}
+
+.name-logo h1{
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.name-logo h1 img{
+    width: 17px;
+    margin-right: 2px;
+    border-radius: 5px;
+}
+
+.nav-link{
+    padding-bottom: 5px;
+    margin: auto;
+}
+
+.nav-link ul li{
+    display: inline-block;
+}
+
+.nav-link ul li a{
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Signika', sans-serif;
+    padding: 5px;
+}
+
+.medsocial{
+    float: right;
+}
+
+.medsocial .img1{
+    width: 25px;
+    display: inline-block;
+}
+
+.medsocial .img2{
+    width: 22px;
+    padding-bottom: 1px;
+}
+
+.medsocial .img3{
+    width: 30px;
+}
+
+label #menu,
+label #close{
+    padding-top: 5px;
+    font-size: 25px;
+    cursor: pointer;
+    color: black;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    nav{
+        box-shadow: 0px 0px 10px rgb(172, 172, 172);
+    }
+
+    label #menu{
+        display: block;
+    }
+
+    .nav-link ul{
+        position: fixed;
+        padding-top: 40px;
+        width: 100%;
+        height: 50vh;
+        top: 55px;
+        right: 700px;
+        z-index: 10;
+        transition: 1s;
+        background-color: #a6a6a6;
+    }
+
+    .nav-link ul li{
+        margin-top: -10px;
+        display: block;
+        line-height: 60px;
+        text-align: center;
+    }
+
+    .nav-link ul li a{
+        font-size: 20px;
+        color: white;
+    }
+
+    label #close{
+        margin-left: 0px;
+    }
+
+    #check:checked ~.nav-link ul{
+        right: 0px;
+    }
+
+    #check:checked ~label #close{
+        display: block;
+    }
+
+    #check:checked ~label #menu{
+        display: none;
+    }
+
+
+    .name-logo{
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+    .name-logo h1{
+        font-size: 20px;
+    }
+    .name-logo h1 img{
+        width: 20px;
+    }
+    .medsocial .img1{
+        width: 30px;
+        display: inline-block;
+    }
+    
+    .medsocial .img2{
+        width: 25px;
+        padding-bottom: 3px;
+    }
+    
+    .medsocial .img3{
+        width: 38px;
+    }
+}
